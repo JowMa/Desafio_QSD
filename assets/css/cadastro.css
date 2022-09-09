@@ -1,0 +1,91 @@
+
+.cadastro {
+    margin-top: 2rem;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 43rem;
+    padding: 1.75rem;
+    box-sizing: border-box;
+    margin-bottom: 1rem;
+}
+
+.cadastro-cabecalho {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 1rem;
+}
+
+.cartao_titulo {
+    font-size: 26px;
+    margin-bottom: 1.5rem;
+    color: #4D4D4D;
+
+}
+
+.cadastro-cartao {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.input {
+    box-sizing: border-box;
+    border: 1px solid #d6eaff;
+    border-radius: 8px;
+    padding: 1.375rem 0.5rem 0.5rem;
+    height: 3.25rem;
+    width: 100%;
+    color: #4D4D4D;
+}
+
+.input:hover {
+    border-color: #4285F4;
+}
+
+.input-label {
+    display: none;
+}
+
+.input-container {
+    font-weight: 300;
+    position: relative;
+    margin-bottom: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    box-sizing: border-box;
+}
+
+.botao-container {
+    display: flex;
+    justify-content: end;
+}
+
+.botao {
+    display: block;
+    background-color: #808080;
+    border-radius: 10px;
+    width: 100%;
+    max-width: 20rem;
+    padding: 1.2rem;
+    box-sizing: border-box;
+    color: #4D4D4D;
+    font-size: 17px;
+    align-self: center;
+    text-align: center;
+    margin-top: 1rem;
+}
+
+@media(min-width: 800px) {
+    .cadastro-cabecalho_logo {
+        width: 5.75rem;
+        margin-bottom: 1rem;
+    }
+
+    .cadastro-cabecalho_titulo {
+        margin-bottom: 2rem;
+    }
+}

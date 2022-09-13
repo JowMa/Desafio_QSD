@@ -1,0 +1,47 @@
+.div-busca {
+    margin: auto;
+    margin-top: 2%;
+    margin-bottom: 4%;
+    width: 30%;
+    height:42px;
+    border: 2px solid #4D4D4D;
+    padding: 0px 10px;
+    border-radius: 8px;
+    background-color: white;
+  }
+
+  .elemento-busca {
+    width: 100%;
+    height: 100%;
+    vertical-align: middle;
+  }
+
+  .txt-busca {
+    border: none;
+    height: 100%;
+    width: 100%;
+    padding: 0 5px;
+    border-radius: 8px;
+    font-size: 18px;
+    color: #4D4D4D;
+    font-weight: 500;
+  }
+
+  .txt-busca:focus {
+    outline:none;
+  }
+
+  .btn-busca {
+    height: 90%;
+    width: 100%;
+    border-radius: 7px;
+    border: 2px solid #4D4D4D;
+    font-size: 25;
+    color: #4D4D4D;
+    background-color: #CCCCCC;
+    transition: transform 0.3s ;
+  }
+  .btn-busca:active {
+    transform: scale(0.95);  
+  }
+

@@ -1,0 +1,19 @@
+.bloco {
+    width: 100%;
+    border: 2px solid #4D4D4D;
+    margin: 5px;
+    padding: 20px 18px;
+    border-radius: 8px;
+    color: #4D4D4D;
+}
+
+.l1 {
+    font-weight: bold;
+    align-items: center;
+}
+
+.l3 {
+    text-align: right;
+    margin-right: 15px;
+    margin-top: 5px;
+}

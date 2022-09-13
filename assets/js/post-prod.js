@@ -12,9 +12,15 @@ function fazPost(url, body) {
     return request.responseText
 }
 
+function limpar(){
+    document.getElementById('nome').value = ''
+    document.getElementById('descricao').value = ''
+    document.getElementById('categoria').value = ''
+    document.getElementById('preco').value = ''
+}
 
 function cadastraUsuario() {
-    event.preventDefault();
+    event.preventDefault(); 
     let url = "http://localhost:3000/produtos";
     let nome = document.getElementById("nome").value;
     let descricao = document.getElementById("descricao").value;
@@ -29,4 +35,7 @@ function cadastraUsuario() {
     }
 
     fazPost(url,body);
+
+    alert('Produto foi cadastrado com sucesso!');
+    limpar();
 }

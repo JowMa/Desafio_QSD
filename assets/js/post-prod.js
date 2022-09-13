@@ -1,15 +1,11 @@
 function fazPost(url, body) {
-    console.log("Body=", body)
+    // console.log("Body=", body)
     let request = new XMLHttpRequest()
     request.open("POST", url, true)
     request.setRequestHeader("Content-type", "application/json")
     request.send(JSON.stringify(body))
-
-    request.onload = function() {
-        console.log(this.responseText)
-    }
-
-    return request.responseText
+  
+    return request
 }
 
 function limpar(){
@@ -26,16 +22,18 @@ function cadastraUsuario() {
     let descricao = document.getElementById("descricao").value;
     let categoria = document.getElementById("categoria").value;
     let preco = document.getElementById("preco").value;
-
     body = {
         "nome": nome,
         "descricao": descricao,
         "categoria": categoria,
         "preco": preco
     }
-
-    fazPost(url,body);
-
-    alert('Produto foi cadastrado com sucesso!');
-    limpar();
+    retorno = fazPost(url,body);
+    console.log(retorno);
+    retorno.onload = function() {
+        if(retorno.status == 200){
+        limpar();
+        alert('O produto foi cadastrado!');
+        };
+    }
 }

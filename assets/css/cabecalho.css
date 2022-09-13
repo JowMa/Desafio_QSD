@@ -22,4 +22,8 @@
 
 .cabecalho_link {
     margin-left: 2rem;
+    transition: transform 0.3s ;
+}
+.cabecalho_link:active {
+    transform: scale(0.98);  
 }

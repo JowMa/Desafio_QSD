@@ -68,7 +68,7 @@
     display: block;
     background-color: #808080;
     border-radius: 10px;
-    width: 100%;
+    width: 43%;
     max-width: 20rem;
     padding: 1.2rem;
     box-sizing: border-box;
@@ -77,6 +77,13 @@
     align-self: center;
     text-align: center;
     margin-top: 1rem;
+    transition: transform 0.5s ;
+}
+.botao:hover {
+    transform: scale(1.01);  
+}
+.botao:active {
+    transform: scale(0.98);  
 }
 
 @media(min-width: 800px) {

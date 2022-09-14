@@ -1,13 +1,15 @@
 
 .cabecalho {
-    background-color: #fff;
+    background-color: #FFF;
     border-radius: 0 0 10px 10px;
-    box-shadow: 0 4px 8px #55a6ff38;
+    box-shadow: 0 4px 8px #3e2c1438;
+    border: solid 2px #4D4D4D;
     display: flex;
     justify-content: space-between;
     align-items: center;
     height: 4.75rem;
     margin-bottom: 2rem;
+    border-top: solid 2px #FFF;
 }
 
 .cabecalho_logo {
@@ -22,7 +24,8 @@
 
 .cabecalho_link {
     margin-left: 2rem;
-    transition: transform 0.3s ;
+    transition: transform 0.3s;
+    
 }
 .cabecalho_link:active {
     transform: scale(0.98);  

@@ -1,4 +1,4 @@
-.div-busca {
+/* .div-busca {
     margin: auto;
     margin-top: 2%;
     margin-bottom: 4%;
@@ -44,4 +44,68 @@
   .btn-busca:active {
     transform: scale(0.95);  
   }
+ */
 
+ @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;700&display=swap');
+
+.div-pesq{
+	width: 500px;
+	margin: 38px auto;
+}
+
+.div-pesq .caixa-pesq{
+	position: relative;
+	width: 500px;
+	height: 60px;
+}
+
+.div-pesq .caixa-pesq .input{
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	padding: 10px 20px;
+	border-radius: 3px;
+	font-size: 18px;
+}
+
+.div-pesq .caixa-pesq .btn-pesq{
+	position: absolute;
+	top: 0;
+	right: 0;
+	width: 60px;
+	height: 100%;
+	background: #7690da;
+	z-index: 1;
+	cursor: pointer;
+}
+
+.div-pesq .caixa-pesq .btn-pesq:hover{
+	background: #708bd2;	
+}
+
+.div-pesq .caixa-pesq .btn-pesq .fas{
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+	color: #fff;
+	font-size: 20px;
+}
+
+.div-pesq .caixa-pesq .btn-pesq{
+	width: 125px;
+	height: 45px;
+	top: 8px;
+	right: 5px;
+	border-radius: 3px;
+	color: #fff;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.div-pesq .caixa-pesq .input{
+	padding-right: 145px;
+}

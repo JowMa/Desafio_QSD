@@ -4,7 +4,11 @@ class ProdutoController {
     static async retornaProdutos(req, res) {
         try {
             const todosProdutos = await database.Produtos.findAll();
-            return res.status(200).json(todosProdutos);
+            if(todosProdutos) {
+                return res.status(200).json(todosProdutos);
+            } else {
+                return res.status(204).json({message: 'Não há produtos cadastrados'});
+            }
         } catch (error) {
             return res.status(500).json(error.message)
         }

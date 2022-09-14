@@ -9,10 +9,10 @@ function fazPost(url, body) {
 }
 
 function limpar(){
-    document.getElementById('nome').value = ''
-    document.getElementById('descricao').value = ''
-    document.getElementById('categoria').value = ''
-    document.getElementById('preco').value = ''
+    document.getElementById('nome').value = '';
+    document.getElementById('descricao').value = '';
+    document.getElementById('categoria').value = '';
+    document.getElementById('preco').value = '';
 }
 
 function cadastraUsuario() {
@@ -28,12 +28,16 @@ function cadastraUsuario() {
         "categoria": categoria,
         "preco": preco
     }
-    retorno = fazPost(url,body);
+    let retorno = fazPost(url,body);
     console.log(retorno);
     retorno.onload = function() {
+        console.log(retorno.status);
         if(retorno.status == 200){
         limpar();
         alert('O produto foi cadastrado!');
-        };
+    } 
+        // else{
+        //     retorno.setCustomValidity(this.responseText);
+        // }
     }
 }

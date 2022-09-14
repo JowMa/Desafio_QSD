@@ -21,30 +21,20 @@
             </ul>
         </nav>
     </header>
-    
-    <div class="div-busca ">
-        <table class="elemento-busca ">
-            <tr>
-                <script src="assets/js/busca-prod.js"></script>
-                <form onsubmit="busca()" >
-                    <td>
-                        <input  name="busca" id="busca" type="text" class="txt-busca" placeholder="Pesquisar"/>
-                    </td>
-                    <td>
-                        <button type="submit" class="btn-busca">enviar</button>
-                    </td> 
-                </form>  
-            </tr>
-        </table>
-    </div>
-
+	<div class="div-pesq">
+		<div class="caixa-pesq">
+			<input id=busca type="text" class="input" placeholder="Pesquisar">
+			<div class="btn-pesq">
+				<p onclick="busca()">Enviar</p>
+			</div>
+		</div>
+	</div>
     <main class="lista-produtos flex-centro  container">
         <ul id="lista">
 
         </ul>
-        <script src="/assets/js/get-prod.js"></script>
         <script src="assets/js/busca-prod.js"></script>
+        <script src="assets/js/get-prod.js"></script>
     </main>
-    
 </body>
 </html>

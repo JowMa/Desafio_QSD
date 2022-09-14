@@ -1,14 +1,10 @@
-function fazGet(url) {
+function fazGetBusca(parametro) {
     let request = new XMLHttpRequest();
-    const parametro = document.getElementById('txt-busca').value;
-    const paramsString = `nome=${parametro}`;
-    console.log(url+'?'+paramsString);
-    request.open("GET",url+'?'+paramsString, false);
-    request.send( );
+    const url = `http://localhost:3000/produtos/busca?nome=${parametro}`;
+    request.open("GET",url, false);
+    request.send();
     return request.responseText;
 }
-
-
 
 function criaLista(produto) {
     let preco = produto.preco;
@@ -36,13 +32,18 @@ function criaLista(produto) {
     lista.appendChild(linha2);
     lista.appendChild(linha3);
 
-    return lista ;
+    return lista;
 }
 
 function busca() {
-    let data = fazGet("http://localhost:3000/produtos/busca");
-    let produtos = JSON.parse(data);
+    const parametro = document.getElementById('busca').value;
     let lista = document.getElementById("lista");
+    while( lista.firstChild ) {
+        lista.removeChild( lista.firstChild );
+      };
+    console.log(parametro);
+    let data = fazGetBusca(parametro);
+    let produtos = JSON.parse(data);
     produtos.forEach(element => {
         let prodLista = criaLista(element);
         lista.appendChild(prodLista);

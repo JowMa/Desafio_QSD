@@ -39,10 +39,13 @@
     height: 3.25rem;
     width: 100%;
     color: #4D4D4D;
+    box-shadow: 0 1px 2.5px 1px #808080; 
+    
 }
 
 .input:hover {
     border-color: #4285F4;
+    box-shadow: 0 1px 2.5px 1px #4285F4;
 }
 
 .input-label {
@@ -67,6 +70,7 @@
 .botao {
     display: block;
     background-color: #808080;
+    box-shadow: 0 1px 2.5px 1px #808080; 
     border-radius: 10px;
     width: 43%;
     max-width: 20rem;
@@ -78,12 +82,15 @@
     text-align: center;
     margin-top: 1rem;
     transition: transform 0.5s ;
+    font-weight: bold;
+    color: #CCCCCC;
+    
 }
 .botao:hover {
     transform: scale(1.01);  
 }
 .botao:active {
-    transform: scale(0.98);  
+    transform: scale(0.98); 
 }
 
 @media(min-width: 800px) {

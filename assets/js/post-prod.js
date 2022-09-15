@@ -1,5 +1,5 @@
 function fazPost(url, body) {
-    // console.log("Body=", body)
+    console.log("Body=", body)
     let request = new XMLHttpRequest()
     request.open("POST", url, true)
     request.setRequestHeader("Content-type", "application/json")
@@ -31,7 +31,7 @@ function cadastraUsuario() {
     let retorno = fazPost(url,body);
     console.log(retorno);
     retorno.onload = function() {
-        console.log(retorno.status);
+        console.log(retorno.responseText);
         if(retorno.status == 200){
         limpar();
         alert('O produto foi cadastrado!');

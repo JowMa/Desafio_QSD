@@ -6,50 +6,42 @@ function fazGetBusca(parametro) {
     return request.responseText;
 }
 
-function criaLista(produto) {
-    let preco = produto.preco;
-    const formatter = new Intl.NumberFormat('pt-BR', {
-        style: 'currency',
-        currency: 'BRL' 
-    });
-    const valor = formatter.format(preco);
-    let lista = document.createElement('li');
-    lista.className ='bloco';
-    let linha1 = document.createElement('p');
-    const prodNome = document.createTextNode(`${produto.nome} - ${produto.categoria}`);
-    linha1.appendChild(prodNome)
-    linha1.className ='l1';
-    let linha2 = document.createElement('p');
-    const prodDesc = document.createTextNode(produto.descricao);
-    linha2.appendChild(prodDesc)
-    linha2.className ='l2';
-    let linha3 = document.createElement('p');
-    const prodPreco = document.createTextNode(valor);
-    linha3.appendChild(prodPreco)
-    linha3.className ='l3';
+function botaoLimpa(botao) {
+    botao.textContent ='limpar';
+    // botao.type = 'reset';
+} 
 
-    lista.appendChild(linha1);
-    lista.appendChild(linha2);
-    lista.appendChild(linha3);
-
-    return lista;
+function botaoEnvia(botao) {
+    botao.textContent = 'enviar';
+    // botao.type = 'submit';
 }
 
-function busca() {
-    const parametro = document.getElementById('busca').value;
+function limpaTela(botao) {
+    document.getElementById('busca').value = "";
+    botaoEnvia(botao);
+    while( lista.firstChild ) {
+        lista.removeChild( lista.firstChild );
+    };
+    pegaProd();
+    return;
+}
+
+function buscaProd() {
+    let botao = document.getElementById('btn-env-limp');
     let lista = document.getElementById("lista");
+    if(botao.innerHTML === 'limpar'){
+        limpaTela(botao);
+        return;
+    }
     while( lista.firstChild ) {
         lista.removeChild( lista.firstChild );
       };
-    console.log(parametro);
+    let parametro = document.getElementById('busca').value;
     let data = fazGetBusca(parametro);
     let produtos = JSON.parse(data);
     produtos.forEach(element => {
         let prodLista = criaLista(element);
         lista.appendChild(prodLista);
     });
+    botaoLimpa(botao);
 }
-
-
-
-

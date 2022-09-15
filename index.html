@@ -22,12 +22,14 @@
         </nav>
     </header>
 	<div class="div-pesq">
-		<div class="caixa-pesq">
-			<input id=busca type="text" class="input" placeholder="Pesquisar">
-			<div class="btn-pesq">
-				<p onclick="busca()">Enviar</p>
-			</div>
-		</div>
+            <div class="caixa-pesq">
+                <form action="" method="post"></form>
+                <input id=busca class="input" placeholder="Pesquisar">
+                <div class="btn-pesq">
+                    <button onclick="buscaProd()" id="btn-env-limp" type="submit">enviar</button>
+                </div>
+                </form>
+            </div>
 	</div>
     <main class="lista-produtos flex-centro  container">
         <ul id="lista">

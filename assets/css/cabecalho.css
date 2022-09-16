@@ -1,6 +1,6 @@
 
 .cabecalho {
-    background-color: #FFF;
+    background-color: #eeeeee;
     border-radius: 0 0 10px 10px;
     box-shadow: 0 4px 8px #3e2c1438;
     border: solid 2px #4D4D4D;
@@ -10,6 +10,7 @@
     height: 4.75rem;
     margin-bottom: 2rem;
     border-top: solid 2px #FFF;
+    padding: 0 5rem;
 }
 
 .cabecalho_logo {
@@ -29,4 +30,24 @@
 }
 .cabecalho_link:active {
     transform: scale(0.98);  
+}
+
+@media screen and (min-width: 0px) {
+    .cabecalho {
+        padding: 0 1rem;
+        justify-content: center;
+    }
+    .cabecalho_logo {
+        display: none;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .cabecalho {
+        padding: 0 5rem;
+        justify-content: space-between;
+    }
+    .cabecalho_logo {
+        display: flex;
+    }
 }

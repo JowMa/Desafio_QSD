@@ -3,7 +3,7 @@
     margin-top: 2rem;
     display: flex;
     flex-direction: column;
-    width: 100%;
+    width: 70%;
     max-width: 43rem;
     padding: 1.75rem;
     box-sizing: border-box;
@@ -93,13 +93,28 @@
     transform: scale(0.98); 
 }
 
-@media(min-width: 800px) {
-    .cadastro-cabecalho_logo {
-        width: 5.75rem;
-        margin-bottom: 1rem;
+@media screen and (min-width: 0px) {
+    .cadastro {
+    width: 100%;
+    }
+    .cartao_titulo {
+        text-align: center;
+    }
+    .botao-container {
+        justify-content: center;
     }
 
-    .cadastro-cabecalho_titulo {
-        margin-bottom: 2rem;
+}
+
+@media screen and (min-width: 768px) {
+    .cadastro {
+        width: 70%;
+    }
+    .cartao_titulo {
+        text-align: left;
+    }
+    .botao-container {
+        justify-content: end;
     }
 }
+

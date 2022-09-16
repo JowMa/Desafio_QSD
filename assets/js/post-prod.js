@@ -1,9 +1,9 @@
 function fazPost(url, body) {
-    console.log("Body=", body)
-    let request = new XMLHttpRequest()
-    request.open("POST", url, true)
-    request.setRequestHeader("Content-type", "application/json")
-    request.send(JSON.stringify(body))
+    console.log("Body=", body);
+    let request = new XMLHttpRequest();
+    request.open("POST", url, true);
+    request.setRequestHeader("Content-type", "application/json");
+    request.send(JSON.stringify(body));
   
     return request
 }
@@ -32,12 +32,9 @@ function cadastraUsuario() {
     console.log(retorno);
     retorno.onload = function() {
         console.log(retorno.responseText);
-        if(retorno.status == 200){
-        limpar();
-        alert('O produto foi cadastrado!');
-    } 
-        // else{
-        //     retorno.setCustomValidity(this.responseText);
-        // }
+            if(retorno.status == 200){
+            limpar();
+            ativar();
+        } 
     }
 }

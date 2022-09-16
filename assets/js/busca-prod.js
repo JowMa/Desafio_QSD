@@ -43,5 +43,7 @@ function buscaProd() {
         let prodLista = criaLista(element);
         lista.appendChild(prodLista);
     });
-    botaoLimpa(botao);
+    if (parametro != 0){
+        botaoLimpa(botao);
+    }
 }

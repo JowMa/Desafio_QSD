@@ -1,0 +1,62 @@
+@import url("https://fonts.googleapis.com/css2?family=M+PLUS+2:wght@400;500&display=swap");
+.alert{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "M PLUS 2", sans-serif;  
+}
+  
+.message {
+  padding: 19px 60px;
+  position: fixed;
+  top: 90px;
+  right: 300px;
+  background-color: rgb(111, 165, 136);
+  border-radius: 6px;
+  color: #fff;
+  animation: slidein 0.2s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+}
+  
+@keyframes slidein {
+  0% {
+    transform: translateX(1000px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+  
+.message::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0;
+  height: 5px;
+  background-color: rgba(0, 0, 0, 0.5);
+  animation: time 3s forwards;
+}
+@keyframes time {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 100%;
+  }
+}
+
+@media screen and (min-width: 0px) {
+    .message {
+        top: 90px;
+        right: 35px;  
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .message {
+        top: 90px;
+        right: 105px;  
+    }
+}

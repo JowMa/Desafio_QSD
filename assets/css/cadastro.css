@@ -1,13 +1,17 @@
 
 .cadastro {
-    margin-top: 2rem;
+    margin-top: 7rem;
+    padding-top: 3rem;
     display: flex;
     flex-direction: column;
-    width: 70%;
     max-width: 43rem;
     padding: 1.75rem;
     box-sizing: border-box;
     margin-bottom: 1rem;
+    border: solid 2px #4D4D4D;
+    border-radius: 6px;
+    box-shadow: 0 1.5px 3px 1.5px #808080; 
+    background-color: #EEEEEE;
 }
 
 .cadastro-cabecalho {
@@ -19,16 +23,24 @@
 
 .cartao_titulo {
     font-size: 26px;
-    margin-bottom: 1.5rem;
+    margin-top: 3rem;
+    margin-bottom: 3rem;
     color: #4D4D4D;
 
 }
 
 .cadastro-cartao {
     display: flex;
+    justify-content: flex;
     flex-direction: column;
     align-items: center;
     text-align: center;
+}
+
+.div-form {
+    align-items: center;
+    padding-left: 10%;
+    padding-right: 10%;
 }
 
 .input {
@@ -69,25 +81,26 @@
 
 .botao {
     display: block;
-    background-color: #808080;
+    background-color: #7690da;
     box-shadow: 0 1px 2.5px 1px #808080; 
     border-radius: 10px;
     width: 43%;
     max-width: 20rem;
     padding: 1.2rem;
     box-sizing: border-box;
-    color: #4D4D4D;
     font-size: 17px;
     align-self: center;
     text-align: center;
-    margin-top: 1rem;
     transition: transform 0.5s ;
     font-weight: bold;
     color: #CCCCCC;
+    margin-top: 0.5rem;
+    margin-bottom: 3rem;
     
 }
 .botao:hover {
-    transform: scale(1.01);  
+    background-color: #637cba;
+    cursor: pointer; 
 }
 .botao:active {
     transform: scale(0.98); 
@@ -95,6 +108,7 @@
 
 @media screen and (min-width: 0px) {
     .cadastro {
+    margin-top: 2.5rem;
     width: 100%;
     }
     .cartao_titulo {
@@ -103,11 +117,16 @@
     .botao-container {
         justify-content: center;
     }
+    .div-form {
+        padding-left: 0;
+        padding-right: 0;
+    }
 
 }
 
 @media screen and (min-width: 768px) {
     .cadastro {
+        margin-top: 7rem;
         width: 70%;
     }
     .cartao_titulo {
@@ -115,6 +134,10 @@
     }
     .botao-container {
         justify-content: end;
+    }
+    .div-form {
+        padding-left: 10%;
+        padding-right: 10%;
     }
 }
 

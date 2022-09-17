@@ -20,7 +20,6 @@ module.exports = {
           preco: 248,
           createdAt: new Date(),
           updatedAt: new Date()
-  
         },
         {
           nome: 'Vaso em Cerâmica Rugo',
@@ -58,3 +57,4 @@ module.exports = {
       await queryInterface.bulkDelete('Produtos', null, {});
   }
 };
+// npx sequelize-cli db:seed:all
